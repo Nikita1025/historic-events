@@ -1,0 +1,21 @@
+@import 'src/styles/variables';
+.container {
+  border-right: 1px solid $colorLine;
+  border-left: 1px solid $colorLine;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.line_gradient {
+  position: absolute;
+  top: 177px;
+  height: 120px;
+  width: 5px;
+  background: $gradient;
+}
+//.content {
+//  margin: 170px 160px 104px 80px;
+//  position: relative;
+//}
