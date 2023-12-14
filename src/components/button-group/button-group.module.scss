@@ -1,0 +1,31 @@
+@import 'src/styles/variables';
+.container {
+  margin-top: -40px;
+  margin-bottom: 56px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  margin-left: 80px;
+}
+.button_group {
+  display: flex;
+  gap: 20px;
+}
+.period {
+  color: $colorBlackBlue;
+  line-height: unset;
+}
+.button {
+  stroke: $colorBlackBlue;
+  fill: $backgroundColorPage;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.button:hover {
+  fill: $backgroundColorButtonVector;
+}
+.button_disabled {
+  stroke: $colorBlackBlue;
+  fill: $backgroundColorPage;
+  opacity: 0.5;
+}

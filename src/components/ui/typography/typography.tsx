@@ -6,7 +6,7 @@ export type TypographyProps<T extends ElementType = 'p'> = {
   as?: T; // h1 h2 h3 for semantic
   className?: string;
   color?: 'primary' | 'secondary' | 'link' | 'error';
-  variant?: 'regular14' | 'large' | 'regular20' | 'regular25';
+  variant?: 'regular14' | 'large' | 'regular20' | 'regular25' | 'h1';
 } & ComponentPropsWithoutRef<T>;
 
 export const Typography = <T extends ElementType = 'p'>(

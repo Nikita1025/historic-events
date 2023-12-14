@@ -2,11 +2,8 @@
 .container {
   border-right: 1px solid $colorLine;
   border-left: 1px solid $colorLine;
-  height: 100%;
+  height: 100vh;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
 }
 .line_gradient {
   position: absolute;
@@ -14,6 +11,12 @@
   height: 120px;
   width: 5px;
   background: $gradient;
+}
+.title {
+  position: absolute;
+  top: 170px;
+  left: 78px;
+  width: 353px;
 }
 //.content {
 //  margin: 170px 160px 104px 80px;

@@ -1,0 +1,13 @@
+@import 'src/styles/variables';
+
+.container {
+  display: flex;
+  position: absolute;
+  gap: 85px;
+}
+.start_data {
+  color: $colorDatePurple;
+}
+.end_data {
+  color: $colorDatePink;
+}

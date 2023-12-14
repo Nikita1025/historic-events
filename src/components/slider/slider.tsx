@@ -7,15 +7,17 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 // eslint-disable-next-line import/order
-import { data } from 'src/common/constants/data';
+import { EventType } from 'src/common/constants/data';
 
 import { SliderItem } from './slider-item';
 import s from './slider.module.scss';
 import { SwipeButton } from './swipe-button';
 
-// eslint-disable-next-line import/order
-import { Pagination } from 'swiper/modules';
-export const Slider = () => {
+type SliderType = {
+  id: number;
+  data: EventType[];
+};
+export const Slider = ({ id, data }: SliderType) => {
   const [swipeRight, setSwipeRight] = useState<boolean>(true);
   const [swipeLeft, setSwipeLeft] = useState<boolean>(false);
 
@@ -33,18 +35,16 @@ export const Slider = () => {
     setSwipeRight(true);
     setSwipeLeft(false);
   };
-  const slide = data.map(el =>
-    el.events.map(ev => {
-      return (
-        <SwiperSlide key={ev.id}>
-          <SliderItem event={ev.description} year={ev.date} />
-        </SwiperSlide>
-      );
-    }),
-  );
+  const slide = data.map(ev => {
+    return (
+      <SwiperSlide key={ev.id}>
+        <SliderItem event={ev.description} year={ev.date} />
+      </SwiperSlide>
+    );
+  });
 
   return (
-    <div className={s.container}>
+    <div className={s.container} key={id}>
       <Swiper
         speed={1000}
         spaceBetween={20}

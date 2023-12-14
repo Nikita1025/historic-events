@@ -1,18 +1,18 @@
-export type Event = {
+export type EventType = {
   id: number;
   description: string;
   date: number;
 };
 
-export type Period = {
+export type PeriodType = {
   id: number;
   startDate: number;
   endDate: number;
   title: string;
-  events: Event[];
+  events: EventType[];
 };
 
-export const data: Period[] = [
+export const data: PeriodType[] = [
   {
     id: 1,
     startDate: 1987,
