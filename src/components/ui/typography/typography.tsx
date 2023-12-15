@@ -3,7 +3,7 @@ import { ComponentPropsWithoutRef, ElementType } from 'react';
 import s from './typography.module.scss';
 
 export type TypographyProps<T extends ElementType = 'p'> = {
-  as?: T; // h1 h2 h3 for semantic
+  as?: T;
   className?: string;
   color?: 'primary' | 'secondary' | 'link' | 'error';
   variant?: 'regular14' | 'large' | 'regular20' | 'regular25' | 'h1';

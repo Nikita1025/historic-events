@@ -2,30 +2,27 @@
 
 .round {
   position: relative;
+  height: 100%;
 }
 
-.wrapperDate {
+.wrapper_date {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
 
-.date {
-  position: absolute;
-  @media screen and (max-width: 550px) {
-    position: relative;
-    top: 0;
-    left: 0;
-    margin-bottom: 50px;
-  }
-}
 .title {
   color: $colorBlackBlue;
   font-size: 20px;
-  font-style: normal;
   font-weight: 700;
   line-height: 30px; /* 150% */
+  left: 71px;
+  position: absolute;
+
+  animation-fill-mode: forwards;
+  animation-name: title;
+  animation-duration: 0.5s;
 }
 .container {
   width: 530px;
@@ -34,9 +31,6 @@
   border-radius: 50%;
   border: 1px solid $colorRound;
   position: relative;
-  @media screen and (max-width: 550px) {
-    display: none;
-  }
 }
 
 .block {
@@ -50,44 +44,34 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  p {
-    background-color: $backgroundColorPage;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 56px;
-    height: 56px;
-    border: 1px solid $colorSmallRound;
-    border-radius: 50%;
-    color: $colorBlackBlue;
-    line-height: 30px;
-    font-size: 20px;
-    font-weight: 400;
-    position: relative;
-
-    span {
-      left: 71px;
-      position: absolute;
-      font-weight: 700;
-      color: $colorBlackBlue;
-      font-size: 20px;
-      line-height: 30px;
-      animation-fill-mode: forwards;
-      animation-name: title;
-      animation-duration: 0.5s;
-    }
-  }
+}
+.active_text {
+  background-color: $backgroundColorPage;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border: 1px solid $colorSmallRound;
+  border-radius: 50%;
+  color: $colorBlackBlue;
+  line-height: 30px;
+  font-size: 20px;
+  font-weight: 400;
+  position: relative;
 }
 
-.emptyBlock {
+.line {
+  display: none;
+}
+.empty_block {
   border-radius: 50%;
   width: 6px;
   height: 6px;
   background-color: $colorBlackBlue;
 }
 
-.animeHover {
+.anime_hover {
   animation-fill-mode: forwards;
   animation-name: animeHover;
   animation-duration: 0.5s;
@@ -113,5 +97,27 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .wrapper_date {
+    padding: 0 20px;
+  }
+  .title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    top: 59px;
+    left: 20px;
+    width: 123px;
+  }
+  .container {
+    display: none;
+  }
+  .line {
+    display: block;
+    margin: 0 20px 20px;
+    border-bottom: 1px solid $line;
   }
 }

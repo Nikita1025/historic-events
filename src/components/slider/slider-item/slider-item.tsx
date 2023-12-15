@@ -13,7 +13,9 @@ export const SliderItem = ({ event, year }: SliderItemType) => {
       <Typography variant={'regular25'} className={s.year}>
         {year}
       </Typography>
-      <Typography variant={'regular20'}>{event}</Typography>
+      <Typography variant={'regular20'} className={s.event}>
+        {event}
+      </Typography>
     </div>
   );
 };

@@ -57,14 +57,13 @@ export const TimeInterval = () => {
 
     const styleBlock = { transform: `rotate(${rotate}deg)` };
 
-    const styleActiveBlockText = { transform: `rotate(-${shift}deg)` };
+    const styleActiveBlockText = {
+      transform: `rotate(-${shift}deg)`,
+    };
 
     const styleBlockText = {
       transform: `rotate(${-(shift + delta * (p.id - 1) + rotateRound)}deg)`,
     };
-
-    console.log(currentPeriodId);
-    console.log(p.id);
 
     return (
       <div
@@ -76,16 +75,16 @@ export const TimeInterval = () => {
         style={styleBlock}
       >
         {currentPeriodId === p.id ? (
-          <p style={styleActiveBlockText}>
+          <p className={s.active_text} style={styleActiveBlockText}>
             {p.id}
             <span className={s.title}>{p.title}</span>
           </p>
         ) : p.id === onMouseOverId ? (
-          <p className={s.animeHover} style={styleBlockText}>
+          <p className={s.anime_hover} style={styleBlockText}>
             {p.id}
           </p>
         ) : (
-          <div className={s.emptyBlock}></div>
+          <div className={s.empty_block}></div>
         )}
       </div>
     );
@@ -93,12 +92,13 @@ export const TimeInterval = () => {
 
   return (
     <div className={s.round}>
-      <div className={s.wrapperDate}>
+      <div className={s.wrapper_date}>
         <Years startData={startDate} endData={endDate} />
         <div className={s.container} style={styleRotateContainer}>
           {periodForRender}
         </div>
       </div>
+      <div className={s.line}></div>
       <ButtonGroup
         currentPeriodId={currentPeriodId}
         setNextPeriod={setNextPeriod}

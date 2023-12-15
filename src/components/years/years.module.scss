@@ -4,10 +4,38 @@
   display: flex;
   position: absolute;
   gap: 85px;
+  top: 52%;
 }
 .start_data {
   color: $colorDatePurple;
 }
 .end_data {
   color: $colorDatePink;
+}
+
+@media screen and (max-width: 720px) {
+  .start_data,
+  .end_data {
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -1.12px;
+  }
+  .container {
+    position: static;
+    margin-top: 163px;
+    gap: unset;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 57px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .start_data,
+  .end_data {
+    font-size: 130px;
+    line-height: 160px;
+  }
 }

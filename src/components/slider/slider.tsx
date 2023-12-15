@@ -10,8 +10,11 @@ import 'swiper/css/navigation';
 import { EventType } from 'src/common/constants/data';
 
 import { SliderItem } from './slider-item';
-import s from './slider.module.scss';
+import s from './slider.scss';
 import { SwipeButton } from './swipe-button';
+
+// eslint-disable-next-line import/order
+import { Pagination } from 'swiper/modules';
 
 type SliderType = {
   id: number;
@@ -37,15 +40,16 @@ export const Slider = ({ id, data }: SliderType) => {
   };
   const slide = data.map(ev => {
     return (
-      <SwiperSlide key={ev.id}>
+      <SwiperSlide key={ev.id} className={s.swiper_slide}>
         <SliderItem event={ev.description} year={ev.date} />
       </SwiperSlide>
     );
   });
 
   return (
-    <div className={s.container} key={id}>
+    <div className={'container_slider'} key={id}>
       <Swiper
+        modules={[Pagination]}
         speed={1000}
         spaceBetween={20}
         mousewheel={true}
@@ -54,7 +58,6 @@ export const Slider = ({ id, data }: SliderType) => {
         onReachEnd={onReachEndHandler}
         slidesPerView={1.5}
         pagination={{ clickable: true }}
-        className={s.swiper_pagination}
         breakpoints={{
           400: {
             spaceBetween: 25,
@@ -71,13 +74,13 @@ export const Slider = ({ id, data }: SliderType) => {
         }}
       >
         {!swipeRight && (
-          <div className={s.swiper_button_left}>
+          <div className={'swiper_button_left'}>
             <SwipeButton swipeRightHandler={swipeLeftHandler} beginning={false} />
           </div>
         )}
         {slide}
         {!swipeLeft && (
-          <div className={s.swiper_button_right}>
+          <div className={'swiper_button_right'}>
             <SwipeButton beginning={true} swipeRightHandler={swipeRightHandler} />
           </div>
         )}

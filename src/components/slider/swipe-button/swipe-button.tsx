@@ -1,6 +1,5 @@
 import React from 'react';
 
-import VectorLeftIcon from 'src/assets/icon/vector-left-icon';
 import VectorRight from 'src/assets/icon/vector-right-icon';
 import { useSwiper } from 'swiper/react';
 
