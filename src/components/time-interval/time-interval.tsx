@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
-import { data } from 'src/common/constants/data';
-import { ButtonGroup } from 'src/components/button-group';
-import { Slider } from 'src/components/slider';
-import { Years } from 'src/components/years';
-
 import s from './time-interval.module.scss';
+
+import { data } from '@/common/constants/data';
+import { ButtonGroup } from '@/components/button-group';
+import { Slider } from '@/components/slider';
+import { Years } from '@/components/years';
 
 const shift = 30;
 const fullRound = 360;

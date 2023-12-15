@@ -1,9 +1,10 @@
 import React from 'react';
 
-import VectorRight from 'src/assets/icon/vector-right-icon';
 import { useSwiper } from 'swiper/react';
 
 import s from './swipe-button.module.scss';
+
+import VectorRight from '@/assets/icon/vector-right-icon';
 type SwipeButtonType = {
   swipeRightHandler: () => void;
   beginning: boolean;

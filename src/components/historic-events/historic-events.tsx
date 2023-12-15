@@ -1,9 +1,10 @@
 import React from 'react';
 
-import { TimeInterval } from 'src/components/time-interval';
-import { Typography } from 'src/components/ui/typography';
-
 import s from './historic-events.module.scss';
+
+import { TimeInterval } from '@/components/time-interval';
+import { Typography } from '@/components/ui/typography';
+
 export const HistoricEvents = () => {
   return (
     <div className={s.container}>

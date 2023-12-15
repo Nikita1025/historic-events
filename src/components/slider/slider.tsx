@@ -1,20 +1,15 @@
-import React, { useState } from 'react';
-
-// eslint-disable-next-line import/order
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+
+import { Pagination } from 'swiper/modules';
+import { EventType } from '@/common/constants/data';
+import { SliderItem } from '@/components/slider/slider-item';
+import { SwipeButton } from '@/components/slider/swipe-button';
+
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
-// eslint-disable-next-line import/order
-import { EventType } from 'src/common/constants/data';
-
-import { SliderItem } from './slider-item';
-import s from './slider.scss';
-import { SwipeButton } from './swipe-button';
-
-// eslint-disable-next-line import/order
-import { Pagination } from 'swiper/modules';
+import './slider.scss';
 
 type SliderType = {
   id: number;
@@ -38,9 +33,13 @@ export const Slider = ({ id, data }: SliderType) => {
     setSwipeRight(true);
     setSwipeLeft(false);
   };
+
+  useEffect(() => {
+    onReachBeginningHandler();
+  }, [id]);
   const slide = data.map(ev => {
     return (
-      <SwiperSlide key={ev.id} className={s.swiper_slide}>
+      <SwiperSlide key={ev.id}>
         <SliderItem event={ev.description} year={ev.date} />
       </SwiperSlide>
     );

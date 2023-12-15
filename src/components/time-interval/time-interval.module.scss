@@ -75,6 +75,14 @@
   animation-fill-mode: forwards;
   animation-name: animeHover;
   animation-duration: 0.5s;
+  background-color: $backgroundColorPage;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border: 1px solid $colorSmallRound;
+  border-radius: 50%;
 }
 
 @keyframes animeHover {
