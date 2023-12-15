@@ -1,10 +1,10 @@
 import React from 'react';
 
-import ButtonLeftIcon from 'src/assets/icon/button-left-icon';
-import ButtonRightIcon from 'src/assets/icon/button-right-icon';
-import { Typography } from 'src/components/ui/typography';
-
 import s from './button-group.module.scss';
+
+import ButtonLeftIcon from '@/assets/icon/button-left-icon';
+import ButtonRightIcon from '@/assets/icon/button-right-icon';
+import { Typography } from '@/components/ui/typography';
 
 type ButtonGroupType = {
   setNextPeriod: () => void;

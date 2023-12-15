@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
-import { Typography } from 'src/components/ui/typography';
-
 import s from './years.module.scss';
+
+import { Typography } from '@/components/ui/typography';
+
 type YearsType = {
   startData: number;
   endData: number;

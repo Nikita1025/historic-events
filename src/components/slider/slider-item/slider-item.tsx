@@ -1,8 +1,9 @@
 import React from 'react';
 
-import { Typography } from 'src/components/ui/typography';
-
 import s from './slider-item.module.scss';
+
+import { Typography } from '@/components/ui/typography';
+
 type SliderItemType = {
   year: number;
   event: string;
