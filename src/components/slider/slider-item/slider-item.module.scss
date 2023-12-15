@@ -1,0 +1,48 @@
+@import 'src/styles/variables';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  gap: 15px;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.year {
+  color: $colorDateBlue;
+  font-family: Bebas Neue;
+}
+
+.event {
+  display: block;
+  overflow-y: scroll;
+  height: 90px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .container {
+    width: 166px;
+  }
+  .year {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+  }
+  .event {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    height: 80px;
+  }
+}

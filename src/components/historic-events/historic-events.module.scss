@@ -1,0 +1,64 @@
+@import 'src/styles/variables';
+
+.container {
+  border-right: 1px solid $colorLine;
+  border-left: 1px solid $colorLine;
+  height: 100vh;
+  position: relative;
+}
+
+.line_gradient {
+  position: absolute;
+  top: 177px;
+  height: 120px;
+  width: 5px;
+  background: $gradient;
+}
+
+.horizontal_line {
+  background-color: $colorLine;
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  top: 480px;
+}
+
+.vertical_line {
+  border-left: 1px solid $colorLine;
+  height: 100%;
+  left: 50%;
+  margin-left: -0.5px;
+  position: absolute;
+  top: 0;
+  width: 1px;
+}
+
+.title {
+  display: block;
+  position: absolute;
+  top: 170px;
+  left: 78px;
+  width: 353px;
+}
+
+@media screen and (max-width: 720px) {
+  .line_gradient {
+    display: none;
+  }
+  .title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    top: 59px;
+    left: 20px;
+    width: 123px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .title {
+    font-size: 38px;
+    line-height: 120%;
+    max-width: 250px;
+  }
+}

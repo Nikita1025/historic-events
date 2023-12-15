@@ -1,0 +1,65 @@
+@import 'src/styles/variables';
+
+.container_slider {
+  animation-fill-mode: forwards;
+  animation-name: animeHover;
+  animation-duration: 1.5s;
+
+  position: relative;
+  padding: 0 80px 104px 80px;
+}
+
+.swiper {
+  position: static !important;
+  cursor: grab;
+}
+
+.swiper-pagination {
+  display: none;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  opacity: 1;
+  background-color: $colorSmallRound;
+  width: 6px;
+  height: 6px;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  background-color: $colorBlackBlue;
+}
+
+.swiper_button_left {
+  position: absolute;
+  left: 20px;
+  top: 50px;
+}
+
+.swiper_button_right {
+  position: absolute;
+  right: 20px;
+  top: 50px;
+}
+
+@media screen and (max-width: 720px) {
+  .swiper_button_right,
+  .swiper_button_left {
+    display: none;
+  }
+  .container_slider {
+    margin: 0 20px 32px 20px;
+    position: unset;
+  }
+  .swiper-slide {
+    width: 166px !important;
+    margin-right: 25px !important;
+  }
+
+  .swiper-slide.partially-hidden {
+    opacity: 0.5;
+  }
+  .swiper-pagination {
+    display: block;
+    bottom: 32px !important;
+  }
+}
