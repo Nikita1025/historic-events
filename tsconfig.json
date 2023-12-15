@@ -24,6 +24,5 @@
     "compilerOptions": {
       "module": "CommonJS"
     }
-  },
-  "include": ["src"]
+  }
 }
