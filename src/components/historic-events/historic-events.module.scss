@@ -46,16 +46,20 @@
     display: none;
   }
   .title {
-    font-size: 20px;
+    font-size: 20px !important;
     font-weight: 700;
-    line-height: 24px;
+    line-height: 24px !important;
     top: 59px;
     left: 20px;
     width: 123px;
   }
+  .vertical_line,
+  .horizontal_line {
+    display: none;
+  }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 721px) and (max-width: 1024px) {
   .title {
     font-size: 38px;
     line-height: 120%;
